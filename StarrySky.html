@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>StarrySky</title>
+    <link href="css/StarrySky.css" type="text/css" rel="stylesheet"/>
+    <script src="js/jq/jquery3.6.4.js"></script>
+</head>
+<body>
+<div>
+    <div class="main" id="main">
+        <!--        <audio id='music' autoplay src='./music/background.mp3'></audio>-->
+        <!--        游戏开始-->
+        <div class="main-page" style="display: block">
+            <!--            游戏说明-->
+            <div class="main-page-text">
+                <div>
+                    <ul>
+                        <li style="text-align: center;font-size: 20px">How to Play Space Adventure.</li>
+                        <li>1. Move the spaceship using the sensible areas in the screen;</li>
+                        <li>2. The timer present the time lapsed;</li>
+                        <li>3. The fuel counter show the remain fuel;</li>
+                        <li>4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that
+                            are presented in the space;
+                        </li>
+                        <li>5. You can shoot pressing Space Bar;</li>
+                        <li>6. If the spaceship hits a asteroid or another spaceship, you lose 1 points of heal;</li>
+                        <li>7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy
+                            destroyed;
+                        </li>
+                        <li>8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid
+                            destroyed;
+                        </li>
+                        <li>9. If you destroy a friendly spaceship, you lose 10 points;</li>
+                        <li>10. During the flight, the spaceship needs to collect fuel in the space;</li>
+                        <li>11. You can pause the game clicking in a button pause, or pressing the letter "p";</li>
+                        <li>12. Go beyond all limits;</li>
+                        <li>Battle in Space with Space Adventure Championship...</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-page-logo">
+                <div>
+                    <img src="logo/logo-planet-3.png" alt=""/>
+                </div>
+                <button class="main-btn">start game</button>
+            </div>
+        </div>
+        <!--        游戏主体-->
+        <div class="main-content">
+            <div id="game" class="game" style="display: none">
+                <!--            头-->
+                <div class="main-content-index" style="display: flex;">
+                    <img class="ig" src="img/time.png" alt=""/>
+                    <span style="display: block;height: 50px;line-height: 50px;width: 50px;" id="time"></span>
+                    <div class="hd">
+                        <span style="display: block;height: 50px;line-height: 50px;width: 60px;float: left">life：</span>
+                        <span style="display: block;height: 50px;line-height: 50px;width: 100px;float: left"
+                              id="hd"></span>
+                    </div>
+                    <div class="score">
+                        <span style="display: block;height: 50px;line-height: 50px;width: 60px;float: left">score：</span>
+                        <span style="height: 50px;line-height: 50px;width: 50px;float: left" id="score"></span>
+                    </div>
+                    <!--                    <div style="width: 100px;height: 50px;position: absolute;right: 5px;top: 50px">-->
+                    <!--                        <img src="./logo/logo-planet-3.png" />-->
+                    <!--                    </div>-->
+                </div>
+                <!--                            底部-->
+                <div class="skill">
+                    <div class="skill-q"></div>
+                    <div class="skill-w"></div>
+                    <div class="skill-e"></div>
+                    <div>
+                        <progress id="fuel" value="" max="50"></progress>
+                    </div>
+                    <div>
+                        <div class="a-a"></div>
+                        <div class="a-b"></div>
+                        <div id="lastshot" class="lastshot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        table-->
+        <div id="main-table-over" class="main-table-over" style="display: none">
+            <div>
+                <h1>game over</h1>
+            </div>
+            <div class="table-input">
+                <input id="name" type="text" placeholder="Input name"/>
+                <input id="btn" type="submit" value="Continue">
+            </div>
+        </div>
+        <div class="tables" style="display: none">
+            <h1 style="text-align: center">ranking</h1>
+            <table align="center" border="1" cellpadding="0" cellspacing="0">
+                <thead align="center">
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>score</td>
+                    <td>time</td>
+                </tr>
+                </thead>
+                <tbody align="center" id="tabledata"></tbody>
+            </table>
+            <button id="GoHome">Home</button>
+        </div>
+    </div>
+</div>
+<!--类-->
+<script src="js/Config.js"></script>
+<script src="js/Element.js"></script>
+<!--skill-->
+<script src="js/skill/Q.js"></script>
+<!--子类-->
+<script src="js/Element-item/Emeny.js"></script>
+<script src="js/Element-item/Friendly.js"></script>
+<script src="js/Element-item/Fuel.js"></script>
+<script src="js/Element-item/Planet.js"></script>
+<script src="js/Element-item/EmenyBullet.js"></script>
+<!--飞机类-->
+<script src="js/player-bullet/Bullet.js"></script>
+<script src="js/player-bullet/Player.js"></script>
+<script src="js/skill/Wup.js"></script>
+<script src="js/skill/Wdown.js"></script>
+<!--main-->
+<script src="js/Gamemian.js"></script>
+
+</body>
+</html>

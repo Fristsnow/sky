@@ -1,0 +1,375 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.main {
+    width: 960px;
+    height: 600px;
+    margin: 50px auto 0;
+    background-size: 200%;
+    background-image: url("../img/bg.jpg");
+    background-position: 0;
+    position: relative;
+    animation: bg 50s linear infinite;
+}
+
+@keyframes bg {
+    to {
+        background-position: 1000% 0;
+    }
+}
+
+
+.main-page-logo {
+    width: 528px;
+    height: 600px;
+    float: left;
+}
+
+.main-page-text {
+    width: 420px;
+    float: left;
+}
+
+.main-page-text > div {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    overflow: scroll;
+    font-size: 15px;
+    margin: 100px 60px;
+    font-family: "Comic Sans MS", serif;
+    color: #fff;
+    border: 5px solid rgba(235, 94, 243, 0.82);
+}
+
+.main-page-text > div::-webkit-scrollbar {
+    display: none;
+}
+
+/* .main-page-logo {
+
+} */
+
+.main-page-logo > div img {
+    width: 430px;
+    height: 180px;
+    object-fit: cover;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+.main-page-logo > button {
+    width: 160px;
+    height: 50px;
+    border: none;
+    margin-left: 170px;
+    margin-top: 150px;
+    font-size: 20px;
+    color: white;
+    background: #d133f5;
+    border-radius: 20px;
+}
+
+.main-page-logo > button:hover {
+    background: #f19e0d;
+    color: black;
+    cursor: pointer;
+}
+
+
+.main-content {
+    width: 960px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+.game {
+    width: 960px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.emeny {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url("../img/enemy.png");
+    position: absolute;
+    animation: emeny 0.4s steps(4) infinite;
+}
+
+.emenybullet {
+    width: 20px;
+    height: 10px;
+    background-size: cover;
+    position: absolute;
+    background-image: url("../img/enemy-bullet.png");
+}
+
+@keyframes emeny {
+    to {
+        background-position: 400%;
+    }
+}
+
+.friendly {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url("../img/friend.png");
+    position: absolute;
+    animation: emeny 0.4s steps(4) infinite;
+}
+
+.planet {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-image: url("../img/stone.png");
+    position: absolute;
+    animation: planet 1s linear infinite;
+}
+
+@keyframes planet {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fuel {
+    width: 22px;
+    height: 60px;
+    background-image: url("../img/power.png");
+    background-size: cover;
+    position: absolute;
+}
+
+.player {
+    width: 60px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("../img/plane2.png");
+    position: absolute;
+}
+
+.bullet {
+    width: 23px;
+    height: 10px;
+    background-size: cover;
+    background-image: url("../img/bullet.png");
+    position: absolute;
+}
+
+/*skill*/
+.q {
+    width: 20px;
+    height: 600px;
+    background: #f6cd4a;
+    position: absolute;
+    z-index: 10;
+}
+
+.wup,.wdown {
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    background-size: 100%;
+    background-image: url("../img/plane.png");
+}
+
+.main-content-index {
+    width: 960px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+
+}
+
+.main-content-index .ig {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.main-content-index > .hd {
+    font-size: 20px;
+    z-index: 2;
+}
+
+.main-content-index > .score {
+    font-size: 20px;
+    z-index: 2;
+}
+
+.skill {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+}
+
+.skill > div:nth-child(1) {
+    width: 50px;
+    height: 60px;
+    margin: 5px 10px 5px;
+    background-size: cover;
+    background-image: url("../img/q.png");
+    float: left;
+}
+
+.skill > div:nth-child(2) {
+    width: 50px;
+    height: 60px;
+    margin: 1px 0;
+    background-size: cover;
+    background-image: url("../img/w.png");
+    float: left;
+}
+
+.skill > div:nth-child(3) {
+    width: 50px;
+    height: 60px;
+    margin: 5px 10px 5px;
+    background-size: cover;
+    background-image: url("../img/e.png");
+    float: left;
+}
+
+.skill > div:nth-child(4) {
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    bottom: 5px;
+    left: 350px;
+}
+
+.skill > div:nth-child(4) progress {
+    width: 300px;
+    height: 20px;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.skill > div:nth-child(4) progress::-webkit-progress-bar {
+    background: rgba(204, 207, 255, 0);
+}
+
+.skill > div:nth-child(4) progress::-webkit-progress-value {
+    background: #d74e06;
+}
+.a-a{
+    width: 60px;
+    position: absolute;
+    height: 60px;
+    bottom: 5px;
+    right: 150px;
+    background-size: cover;
+    background-image: url("../img/A1.png");
+}
+.a-b{
+    width: 60px;
+    position: absolute;
+    height: 60px;
+    bottom: 5px;
+    right: 80px;
+    background-size: cover;
+    background-image: url("../img/A2.png");
+}
+.lastshot {
+    width: 60px;
+    position: absolute;
+    height: 60px;
+    bottom: 5px;
+    right: 5px;
+    background-size: cover;
+    background-image: url("../img/runmind.png");
+}
+
+/*table*/
+.main-table-over {
+    width: 100%;
+    height: 600px;
+    top: 0;
+    position: absolute;
+    background: aqua;
+}
+
+.main-table-over > div:nth-child(1) h1 {
+    position: absolute;
+    top: 100px;
+    left: 350px;
+    font-size: 50px;
+}
+
+.main-table-over > div:nth-child(2) {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+.main-table-over > div:nth-child(2) input:nth-child(1) {
+    width: 400px;
+    display: block;
+    height: 30px;
+    margin: 30px 0;
+    border: 1px solid #44cec2;
+    border-radius: 20px;
+    background: aqua;
+}
+
+.main-table-over > div:nth-child(2) input:nth-child(1):hover {
+    background: aquamarine;
+}
+
+.main-table-over > div:nth-child(2) input:nth-child(2) {
+    width: 200px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    left: 80px;
+    border: 1px solid #44cec2;
+    border-radius: 20px;
+}
+
+/*.main-table-over > div:nth-child(2) input:nth-child(2):hover {*/
+/*    background: pink;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.tables{
+    width: 960px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+}
+
+.tables>table{
+    width: 400px;
+    height: 400px;
+    margin: 30px auto 0;
+    background-color: #7e7e7e;
+}
+.tables>button{
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 30px auto 0;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+.tables>button:hover{
+   background-color: #f19e0d;
+}
