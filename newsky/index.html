@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞机大战 V2.0</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/button.css"/>
+    <link rel="stylesheet" type="text/css" href="css/EItem.css">
+    <script src="common/jquery3.6.4.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--    主界面     -->
+    <div class="main_start">
+        <!--        游戏介绍        -->
+        <div class="main_start_introduce">
+            <ul>
+                <li style="text-align: center;font-size: 20px">How to Play Space Adventure.</li>
+                <li>1. Move the spaceship using the sensible areas in the screen;</li>
+                <li>2. The timer present the time lapsed;</li>
+                <li>3. The fuel counter show the remain fuel;</li>
+                <li>4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that
+                    are presented in the space;
+                </li>
+                <li>5. You can shoot pressing Space Bar;</li>
+                <li>6. If the spaceship hits a asteroid or another spaceship, you lose 1 points of heal;</li>
+                <li>7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy
+                    destroyed;
+                </li>
+                <li>8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid
+                    destroyed;
+                </li>
+                <li>9. If you destroy a friendly spaceship, you lose 10 points;</li>
+                <li>10. During the flight, the spaceship needs to collect fuel in the space;</li>
+                <li>11. You can pause the game clicking in a button pause, or pressing the letter "p";</li>
+                <li>12. Go beyond all limits;</li>
+                <li>Battle in Space with Space Adventure Championship...</li>
+            </ul>
+        </div>
+        <!--        开始按钮        -->
+        <div class="main_start_logo">
+            <img width="380" height="160" alt="not found" src="logo/logo-planet-3.png"/>
+            <button id="startBtn" class="btn btn_position">开始游戏</button>
+        </div>
+    </div>
+    <!--    游戏界面    -->
+    <div class="main_game">
+        <div class="main_game_top">
+            <span id="time"></span> |
+            <span id="life"></span> |
+            <span id="score"></span>
+        </div>
+        <footer>
+            <progress id="fuel" value="" max="50"></progress>
+        </footer>
+    </div>
+    <div class="main_input">
+        <h1>结算界面</h1>
+        <input id="input_name" placeholder="请输入你的name"/>
+        <button id="input_name_btn" class="btn">提交</button>
+    </div>
+    <div class="main_over">
+        <div class="tables">
+            <h1>游戏结束</h1>
+            <table align="center" border="1" cellpadding="0" cellspacing="0">
+                <thead align="center">
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>score</td>
+                    <td>time</td>
+                </tr>
+                </thead>
+                <tbody align="center" id="tabledata"></tbody>
+            </table>
+            <button id="GoHome" class="btn">Home</button>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    import {Index} from "./js/Index.js";
+
+    $(document).ready(() => {
+        // 初始化
+        $('#startBtn').click(() => {
+            $('.main_start').fadeToggle()
+            $('.main_game').fadeToggle(2000)
+            window.game = new Index()
+        })
+    })
+</script>
+</body>
+</html>

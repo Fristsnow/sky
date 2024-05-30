@@ -1,8 +1,16 @@
 <?php
+/*
+ * @Author: Lucky-Firstsnow firstsnow1119@163.com
+ * @Date: 2023-11-14 13:43:57
+ * @LastEditors: Lucky-Firstsnow firstsnow1119@163.com
+ * @LastEditTime: 2024-05-14 16:45:27
+ * @FilePath: \sky\register.php
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 //header("Access-Control-Allow-Origin:*");
 $conn = new PDO('mysql:host=localhost;dbname=client_side;charset=utf8',
     'root',
-    '', [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    '123456', [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 //header("A");
 $name = $_POST['name'] ?? null;
 $time = $_POST['time'] ?? null;

@@ -129,9 +129,10 @@ class Game {
         })
         $("#btn").click(() => {
             let name = document.getElementById("name").value
+            console.log(name)
             $.ajax({
-                // url: 'http://localhost:80/sky/register.php',
-                url: './register.php',
+                url: 'http://localhost:8033/sky-game-end/sky/register.php',
+                // url: './register.php',
                 method: 'POST',
                 dataType: 'json',
                 data: {

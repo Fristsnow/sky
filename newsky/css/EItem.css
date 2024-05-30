@@ -1,0 +1,79 @@
+/*玩家*/
+.player {
+    width: 60px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("../img/plane2.png");
+    position: absolute;
+}
+
+/*子弹*/
+.bullet {
+    width: 23px;
+    height: 10px;
+    background-size: cover;
+    background-image: url("../img/bullet.png");
+    position: absolute;
+}
+
+/*敌军，友军移动动画*/
+@keyframes EItem {
+    to {
+        background-position: 400%;
+    }
+}
+
+/*敌人*/
+.enemy {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url("../img/enemy.png");
+    position: absolute;
+    animation: EItem 0.4s steps(4) infinite;
+}
+
+/*敌人子弹*/
+.enemy_bullet {
+    width: 20px;
+    height: 10px;
+    background-size: cover;
+    position: absolute;
+    background-image: url("../img/enemy-bullet.png");
+}
+
+/*友军*/
+.friendly {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url("../img/friend.png");
+    position: absolute;
+    animation: EItem 0.4s steps(4) infinite;
+}
+
+/*能量*/
+.fuel {
+    width: 22px;
+    height: 60px;
+    background-image: url("../img/power.png");
+    background-size: cover;
+    position: absolute;
+}
+
+/*陨石*/
+.planet {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-image: url("../img/stone.png");
+    position: absolute;
+    animation: planet 1s linear infinite;
+}
+
+/*陨石滚动*/
+@keyframes planet {
+    to {
+        transform: rotate(360deg);
+    }
+}
